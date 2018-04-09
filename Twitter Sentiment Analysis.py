@@ -4,8 +4,6 @@ import tensorflow as tf
 from keras.preprocessing.text import Tokenizer
 from keras.layers import Dense,Convolution2D,Dropout,MaxPooling2D,Flatten,Convolution1D,MaxPooling1D
 from keras.models import Sequential
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 import numpy as np
 
@@ -62,7 +60,7 @@ model.compile(optimizer='rmsprop',loss='binary_crossentropy',metrics=['accuracy'
 with tf.device('/gpu:0'):
     model.fit(data,y,epochs=10,validation_split=0.1,batch_size=64)
 
-pred_item = tweet_data.iloc[50002]['SentimentText']
+pred_item = tweet_data.iloc[70002]['SentimentText']
 item = tk.texts_to_matrix(pred_item)
 row,_ = item.shape
 item = np.pad(item,((0,(480-row)),(0,0)),mode='constant')
