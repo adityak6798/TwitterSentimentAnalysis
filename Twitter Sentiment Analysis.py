@@ -10,7 +10,7 @@ import numpy as np
 #Fetch Dataset
 
 
-tweet_data = pd.read_csv('train(1).csv',encoding='latin-1')
+tweet_data = pd.read_csv('train.csv',encoding='latin-1')
 tweet_arr = np.array(tweet_data.as_matrix())
 np.random.shuffle(tweet_arr)
 tweet_data = pd.DataFrame(tweet_arr,columns=tweet_data.columns)
