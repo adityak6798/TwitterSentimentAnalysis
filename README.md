@@ -20,3 +20,5 @@ Model Architecture:
 
 Binary Cross-entropy loss function, RMSProp optimizer. Trained for 10 epochs with 60000 examples split into 54000 training and 6000 cross-validation examples. Batch size 64.
 Expected Accuracy: Around 75%
+
+Training Dataset has been taken from Kaggle: https://www.kaggle.com/c/twitter-sentiment-analysis2/data
